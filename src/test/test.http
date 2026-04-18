@@ -1,0 +1,32 @@
+
+
+### Pobranie piłkarza po ID
+GET http://localhost:8080/player/1
+Accept: application/json
+
+### Pobranie wszystkich piłkarzy
+GET http://localhost:8080/player
+Accept: application/json
+
+### Tworzenie nowego piłkarza (POST)
+POST http://localhost:8080/player
+Content-Type: application/json
+
+{
+  "name": "Robert Lewandowski"
+}
+
+###
+
+### Aktualizacja piłkarza (PUT)
+PUT http://localhost:8080/player/1
+Content-Type: application/json
+
+{
+  "name": "Erling Haaland"
+}
+
+###
+
+### Usunięcie piłkarza (DELETE)
+DELETE http://localhost:8080/player/1
