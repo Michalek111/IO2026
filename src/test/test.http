@@ -9,11 +9,11 @@ GET http://localhost:8080/player
 Accept: application/json
 
 ### Tworzenie nowego piłkarza (POST)
-POST http://localhost:8080/player
+POST http://localhost:8081/player
 Content-Type: application/json
 
 {
-  "name": "Robert Lewandowski"
+  "name": "Neymar"
 }
 
 ###
@@ -23,7 +23,7 @@ PUT http://localhost:8080/player/1
 Content-Type: application/json
 
 {
-  "name": "Erling Haaland"
+  "name": "Messi"
 }
 
 ###

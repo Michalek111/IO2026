@@ -1,0 +1,32 @@
+services:
+  mysql-player:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: playerdb
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql-player/data:/var/lib/mysql
+      - ./mysql-player/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app-player:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-player
+    environment:
+          SPRING_PROFILES_ACTIVE: docker
+    restart: on-failure
+
+  app-player-2:
+    build: .
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mysql-player
+    environment:
+        SPRING_PROFILES_ACTIVE: docker
+    restart: on-failure
