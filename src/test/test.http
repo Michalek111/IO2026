@@ -13,7 +13,7 @@ POST http://localhost:8081/player
 Content-Type: application/json
 
 {
-  "name": "Neymar"
+  "name": "Piątek"
 }
 
 ###
@@ -23,7 +23,7 @@ PUT http://localhost:8080/player/1
 Content-Type: application/json
 
 {
-  "name": "Messi"
+  "name": "X"
 }
 
 ###
