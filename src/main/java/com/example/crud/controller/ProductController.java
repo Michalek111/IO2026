@@ -38,4 +38,10 @@ public class ProductController {
     public void delete(@PathVariable Long id) {
         service.delete(id);
     }
+
+
+    @GetMapping("/instance")
+    public String instance() {
+        return System.getenv("HOSTNAME");
+    }
 }
